@@ -1,3 +1,23 @@
 body {
     margin: 0;
+    display:flex;
 }
+div{
+    width: 200px;
+    height: 300px;
+}
+.Top{
+    background-color: blue;
+
+    
+    }
+    
+    .Mid{
+        background-color: yellow;
+
+    }
+    
+    .Bot{
+        background-color:red;
+
+    }

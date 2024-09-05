@@ -3,7 +3,7 @@
 The exercises in this section will help to understand concepts behind layout and positioning of elements in the screen.
 
 For more detail on these exercises, please refer to the class website.
-
+ 
 ## Diagonal
 
 Starting with the given code:

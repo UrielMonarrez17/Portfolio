@@ -1,0 +1,137 @@
+body{
+    margin:0px;
+}
+div{
+    border: 2px solid;
+}
+.container{
+    display: flex;
+    width: 600px;
+}
+
+.Col1{
+    width: 200px;
+height: 61vh;
+display: flex;
+flex-direction: column;
+}
+
+/*Direccion horizontal*/
+.first_container{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Direccion vertical*/
+.second_container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Horizontales*/
+.rectangulo_largo_a{
+    width: 160px;
+    height: 5vh;
+    background-color: yellow;
+
+}
+.rectangulo_chico_a{
+    width: 40px;
+    height: 5vh;
+    background-color: yellow;
+}
+.rectangulo_largo_az{
+    width: 160px;
+    height: 5vh;
+    background-color: blue;
+
+}
+.rectangulo_chico_az{
+    width: 40px;
+    height: 5vh;
+    background-color: blue;
+}
+.rectangulo_largo_b{
+    width: 160px;
+    height: 5vh;
+
+}
+.rectangulo_chico_b{
+    width: 40px;
+    height: 5vh;
+}
+.rectangulo_chico_r{
+    width: 40px;
+    height: 5vh;
+    background-color: red;
+}
+.rectangulo_largo_r{
+    width: 160px;
+    height: 5vh;
+    background-color: red;
+}
+
+/*Verticales*/
+.rectangulo_alto_a{
+    width: 30px;
+    height: 100px;
+    background-color: yellow;
+}
+.rectangulo_corto_a{
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+}
+.rectangulo_alto_az{
+    width: 30px;
+    height: 100px;
+    background-color: blue;
+}
+.rectangulo_corto_az{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}
+.rectangulo_alto_b{
+    width: 30px;
+    height: 100px;
+}
+.rectangulo_corto_b{
+    width: 30px;
+    height: 30px;
+}
+.rectangulo_alto_r{
+    width: 30px;
+    height: 100px;
+    background-color: red;
+}
+.rectangulo_corto_r{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+/*Cuadrados*/
+.cuadrado_rojo{
+    width: 160px;
+    height: 160px;
+    background-color: red;
+}
+.cuadrado_blanco{
+    width: 160px;
+    height: 160px;
+}
+.cuadrado_azul{
+    width: 160px;
+    height: 160px;
+    background-color: blue;
+}
+
+.Col2{
+    width: 200px;
+height: 61vh;
+}
+.Col3{
+    width: 200px;
+height: 61vh;
+}

@@ -1,7 +1,7 @@
 # Personal Website - HTML
 
 This exercise will guide us to learn most of the html basic elements. This guide will be used in later projects, so make sure that you have all the requested sections in the suggested tags and styles.
-
+ 
 ---
 
 ### Basic structures
@@ -73,7 +73,7 @@ This exercise will guide us to learn most of the html basic elements. This guide
 
 ---
 
-### Forms
+### Forms 
 
 - Add a weekly schedule form where they can register:
 
