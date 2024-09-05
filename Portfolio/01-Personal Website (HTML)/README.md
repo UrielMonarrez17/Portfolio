@@ -56,7 +56,7 @@ This exercise will guide us to learn most of the html basic elements. This guide
 - Add direct links to the homepage of your educational institutions, make sure that the image also takes you there.
 
 ---
-
+ 
 ### Tables
 
 - Add a new section of **heroes/writers/musicians**, etc
