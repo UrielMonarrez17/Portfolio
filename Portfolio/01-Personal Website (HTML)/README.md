@@ -47,7 +47,7 @@ This exercise will guide us to learn most of the html basic elements. This guide
     - Province/State
     - Country
     - Population
-    - Latitude & longitude
+    - Latitude & longitude 
   - Flag of the country
 - Add a back link to the **homepage**
 - Create a link to your **destination** page from the **homepage** with the title _My Favorite Spots_.

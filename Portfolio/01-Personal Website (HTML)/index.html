@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My personal Website</title>
+  
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Hobbies">Hobbies</a></li>
+          
+          <li><a href="#heroes-writers-musicians">heroes-writers-musicians</a></li>
+          <li><a href="#Forms">Forms</a></li>
+        </ul>
+      </nav>
+    </header>
     <img src="images/me.jpg" width="100px"/>
     <h1 style="background-color: blue">Uriel Arturo Monarrez Cervantes</h1>
     <p>
@@ -32,27 +45,28 @@
       <b>Advanced technology</b> for the using in the daily life
     </p>
     <hr/>
-    <h2>Education</h2>
+    <h2 id="Education">Education</h2>
     <ul>
       <li>
         <em>2008-2011:</em><b>Kinder Garden: Jean Piaget</b>
-        <img src="images\jean_pieget.jpg" width="100px"/>
+        <a href=""><img src="images\jean_pieget.jpg" width="100px"/></a>
       </li>
       <li>
-        <em>2011-2017:</em><b>Elementary School: Fransisco i Madero</b> <img
-        src="images\Nueva_espana.png" width="100px"/>
+        <em>2011-2017:</em><b>Elementary School: Fransisco i Madero</b> 
+        <a href="https://colegionuevaespana.com.mx/"><img src="images\Nueva_espana.png" width="100px"/></a>
       </li>
       <li>
         <em>2017-2020:</em><b>Middle School: Nueva España</b
-        ><img src="images\primaria.png" width="100px"/>
+        >
+        <a href="https://colegionuevaespana.com.mx/"> <img src="images\Nueva_espana.png" width="100px"/></a>
       </li>
       <li>
         <em>2020-2023:</em><b>High School: UNIVA </b>
-        <img src="images\Univa_logo.png" width="100px"/>
+        <a href="https://www.univa.mx/"><img src="images\Univa_logo.png" width="100px"/></a>
       </li>
     </ul>
     <hr/>
-    <h2>Skills</h2>
+    <h2 id="Skills">Skills</h2>
     <ol type="4">
       <!--para cambiar a letras type = "a", que empieze desde un numero start="4"-->
       <li>Robotics</li>
@@ -60,7 +74,7 @@
       <li>Lazyness</li>
     </ol>
     <hr/>
-    <h2>Hobbies</h2>
+    <h2 id="Hobbies">Hobbies</h2>
     <ul>
       <li>Play League of Legends</li>
     </ul>
@@ -103,7 +117,7 @@
         <li>Lo que la vida me robo</li>
         <li>Teresa</li>
       </ol>
-    </ul> 
+    </ul>  
     <hr/>
     <section id="heroes-writers-musicians">
       <h2>Heroes, Writers, and Musicians</h2>
@@ -140,7 +154,7 @@
     </section>
     <hr/>
     <div>
-      <h3>Forms</h3>
+      <h3 id="Forms">Forms</h3>
       
         <h6>Date:</h6><input type="date" /><hr/>
         <h6>Time start:</h6><input type="time" /><hr/>
