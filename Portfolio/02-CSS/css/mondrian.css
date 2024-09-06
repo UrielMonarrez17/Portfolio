@@ -11,7 +11,7 @@ div{
 
 .Col1{
     width: 200px;
-height: 61vh;
+height: 430px;
 display: flex;
 flex-direction: column;
 }
@@ -129,9 +129,9 @@ flex-direction: column;
 
 .Col2{
     width: 200px;
-height: 61vh;
+    height: 430px;
 }
 .Col3{
     width: 200px;
-height: 61vh;
+    height: 430px;
 }

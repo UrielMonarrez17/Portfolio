@@ -71,7 +71,7 @@ This exercise will guide us to learn most of the html basic elements. This guide
 
 - Create a weekly schedule table with a column for date, start, end, description, place, type, notes, with and an icon to idenify if it is busy or free
 
----
+--- 
 
 ### Forms 
 
