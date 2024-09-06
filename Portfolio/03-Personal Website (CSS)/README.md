@@ -27,7 +27,7 @@ This exercise will guide us to learn and experience the basic concepts of CSS in
   - Dotted, color #EAF6F6 and width 6px
   - No bottom border
   - Width in the screen of 4%
-  - Margins of 100px left and right
+  - Margins of 100px left and right                                                                                                                                                                                                                                                                   
 - Change the L&F of links
 
   - Eliminate the underlining
