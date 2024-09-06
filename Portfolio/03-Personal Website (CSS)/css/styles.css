@@ -72,4 +72,5 @@ input, select, textarea{
 
 .cloud{
   position: sticky;
+  top: 20px;
 }
