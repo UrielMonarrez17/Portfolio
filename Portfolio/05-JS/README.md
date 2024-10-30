@@ -1,7 +1,7 @@
 # Simple JS Exercises
 
 These exercises will just show multiple ways in which JS can interact with our web page. The implementation of the following exercises are just simple ways to display them. Some of these codes are implemented in old JS versions, but are provided as such for the understanding of the student.
-
+ 
 **You must complete at least 8 points for full credit**
 
 ---

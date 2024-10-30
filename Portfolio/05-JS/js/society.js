@@ -45,14 +45,34 @@ function flatlander(width, height, x, y, isHappy) {
     // TODO: Update the x, y position using the this.speedX and this.speedY
     // values of the object. Make sure that when they reach an edge, they
     // bounce back.
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    // Rebotar si alcanza los bordes del canvas
+    if (this.x + this.width > canvasWidth || this.x < 0) {
+      this.speedX = -this.speedX; // Cambia de dirección
+    }
+    if (this.y + this.height > canvasHeight || this.y < 0) {
+      this.speedY = -this.speedY; // Cambia de dirección
+    }
   };
   this.moreHappy = function () {
     // TODO: increase the happyPoints value and check if the isHappy flag
     // needs to be updated along with the image being displayed
+    this.happyPoints += 1;
+    if (this.happyPoints > 0 ) {
+      this.isHappy = true;
+      this.image.src = happySrc;
+    }
   };
   this.lessHappy = function () {
     // TODO: decrease the happyPoints value and check if the isHappy flag
     // needs to be updated along with the image being displayed
+    this.happyPoints -= 1;
+    if (this.happyPoints < 0) {
+      this.isHappy = false;
+      this.image.src = sadSrc;
+    }
   };
   this.checkSurroundings = function (other) {
     var x = Math.pow(this.x - other.x, 2);
@@ -63,21 +83,27 @@ function flatlander(width, height, x, y, isHappy) {
 
 function startGame() {
   // TODO: make sure to get all the values from the screen
-  var n = 1;
-  var m = 1;
+  var n = $("#num").val(); // Número de entidades totales
+  var m =$("#sad").val();  // Número de entidades tristes
   if (parseInt(m) > parseInt(n)) {
-    window.alert("Can not have more sad than individuals.");
+    window.alert("Cannot have more sad individuals than total individuals.");
     return;
   }
   var sad = 0;
   for (i = 0; i < n; i++) {
-    //var rand = Math.random() * 100;
-    // 30% of chance of getting an angry subject
-    var nX = (Math.random() * 10000) % myGameArea.canvas.width;
-    var nY = (Math.random() * 10000) % myGameArea.canvas.height;
-    var gamePiece = new flatlander(30, 30, nX, nY, ++sad > m);
+    // Asigna una posición aleatoria para cada entidad
+    var nX = Math.random() * myGameArea.canvas.width;
+    var nY = Math.random() * myGameArea.canvas.height;
+
+    // Determina si la entidad será feliz o triste
+    var isSad = (++sad > m); // Si sad > m, la entidad será feliz
+    var gamePiece = new flatlander(30, 30, nX, nY, isSad);
+    
+    // Añade la entidad al array de juego
     myGamePiece.push(gamePiece);
   }
+  
+  // Inicia el área de juego
   myGameArea.start();
 }
 
