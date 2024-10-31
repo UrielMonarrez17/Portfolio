@@ -1,0 +1,21 @@
+<%- include('header') %>
+<h1>Bienvenido, <%= name %>!</h1>
+<form action="/post" method="POST">
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="content">Contenido:</label>
+    <textarea id="content" name="content" required></textarea>
+    <button type="submit">Crear publicación</button>
+</form>
+
+<h2>Publicaciones:</h2>
+<ul>
+    <% posts.forEach((post, index) => { %>
+        <li>
+            <h3><%= post.title %></h3>
+            <p><%= post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content %></p>
+            <a href="/post/<%= index %>">Leer más</a>
+        </li>
+    <% }) %>
+</ul>
+<%- include('footer') %>

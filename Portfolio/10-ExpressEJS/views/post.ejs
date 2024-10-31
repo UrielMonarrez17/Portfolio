@@ -1,0 +1,12 @@
+<%- include('header') %>
+<h2><%= post.title %></h2>
+<p><%= post.content %></p>
+<form action="/post/<%= index %>/edit" method="POST">
+    <textarea name="content" required><%= post.content %></textarea>
+    <button type="submit">Guardar cambios</button>
+</form>
+<form action="/post/<%= index %>/delete" method="POST">
+    <button type="submit">Eliminar publicación</button>
+</form>
+<a href="/">Volver al inicio</a>
+<%- include('footer') %>

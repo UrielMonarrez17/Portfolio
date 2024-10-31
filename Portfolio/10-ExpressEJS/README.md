@@ -3,7 +3,7 @@
 This exercise will ilustrate how do we use EJS to create dynamic content using Express.
 
 ---
-
+ 
 ### Initial config
 
 - Create an express server, listening port 3000
