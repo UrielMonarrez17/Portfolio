@@ -30,9 +30,13 @@ app.post('/post', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-  const name = Object.keys(users)[0];
-  if (!name) return res.redirect('/');
-  res.render('home', { name, posts });
+  if (!user) return res.redirect('/');
+  res.render('home', { user, posts });
+});
+
+app.get('/home:user', (req, res) => {
+  if (!user) return res.redirect('/');
+  res.render('home', { user, posts });
 });
 
 app.get('/post/:index', (req, res) => {
