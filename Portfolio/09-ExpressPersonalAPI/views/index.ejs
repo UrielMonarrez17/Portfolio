@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express test</title>
+</head>
+
+<body> 
+    <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+        <% } %>
+            <form action="/greet" method="get">
+                Register:
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="submit" value="go next">
+            </form>
+
+            <h2>Saludos a:</h2>
+    <ul>
+        <% names.forEach(name => { %>
+            <li><a href="/greet/<%= names.indexOf(name) %>"><%= name %></a></li>
+        <% }) %>
+    </ul>
+
+    <h2>TODO List</h2>
+<form action="/task" method="POST">
+    <input type="text" name="task" placeholder="Nueva tarea">
+    <button type="submit">Agregar Tarea</button>
+</form>
+<ul>
+    <% tasks.forEach((task, index) => { %>
+        <li>
+            <%= task %>
+            <a href="/task/delete/<%= index %>">Eliminar</a>
+            <a href="/task/up/<%= index %>">⬆️</a>
+            <a href="/task/down/<%= index %>">⬇️</a>
+        </li>
+    <% }) %>
+</ul>
+
+</body>
+
+</html>
