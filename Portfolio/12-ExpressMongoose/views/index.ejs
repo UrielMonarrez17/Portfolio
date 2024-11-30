@@ -1,0 +1,46 @@
+<img src="../images/StarLion.png" alt="lion brewery" />
+<h1>Welcome to my F1 DB</h1>
+
+<!-- Formulario para agregar información de un conductor -->
+<form action="/driver" method="get">
+    <h2>Driver Information</h2>
+    <input type="text" name="num" id="num" placeholder="Number" />
+    <input type="text" name="code" id="code" placeholder="Code" />
+    <input type="text" name="fname" id="fname" placeholder="Forename" />
+    <input type="text" name="sname" id="sname" placeholder="Surname" />
+    <br />
+    <label for="dob">Date of Birth: </label>
+    <input type="date" name="dob" id="dob" />
+    <label for="url">Biography URL: </label>
+    <input type="url" name="url" id="url" />
+    <br />
+    <label for="nation">Nationality: </label>
+    <select name="nation" id="nation" class="nation">
+        <% countries.forEach((element) => { %>
+        <option value="<%= element.label %>"><%= element.label %></option>
+        <% }) %>
+    </select>
+    <label for="team">Team: </label>
+    <select name="team" id="team" class="team">
+        <% teams.forEach((team) => { %>
+        <option value="<%= team.id %>"><%= team.name %></option>
+        <% }) %>
+    </select>
+    <p><input type="submit" value="Submit Driver" /></p>
+</form>
+
+<!-- Botón para alternar entre las tablas -->
+<% if (driverList) { %>
+    <a href="/toggleTable">Go to the Teams Table</a>
+<% } else { %>
+    <a href="/toggleTable">Go to the Drivers Table</a>
+<% } %>
+
+<!-- Renderizado condicional de las tablas -->
+<div class="table">
+    <% if (driverList) { %>
+        <%- include("./partials/form") %>
+    <% } else { %>
+        <%- include("./partials/form") %>
+    <% } %>
+</div>

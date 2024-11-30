@@ -1,0 +1,64 @@
+<h1>Veamos</h1>
+            <!-- number,code,forename,surname,dob,nationality,url,current_team -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Code</th>
+                        <th>Forename</th>
+                        <th>Surname</th>
+                        <th>DOB</th>
+                        <th class = "nation">Nationality</th>
+                        <th>URL</th>
+                        <th class = "team">Current Team</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% drivers.forEach((element)=>{ %>
+                        <% if(Edit == element.num) {%>
+                            <tr>
+                                <form action="/confirmEditDriver/<%= Edit %>" method= "POST">
+                                    <td><%= element.num %></td>
+                                    <td><input type="text" name="code" value = "<%= element.code %>"></td> 
+                                    <td><input type="text" name="fname" value = "<%= element.forename %>"></td> 
+                                    <td><input type="text" name="sname" value = "<%= element.surname %>"></td> 
+                                    <td><input type="date" name="dob" value = "<%= element.dob.toISOString().split('T')[0] %>"></td>
+                                    <td>
+                                    <select name="nation" id="nation">
+                                        <% countries.forEach((nation)=> {%>
+                                        <option value="<%= nation.label  %>" <% if(nation.label === element.nationality) {%>selected<%}  %>><%= nation.label  %></option>
+                                        <%})  %>
+                                    </select>
+                                    </td> 
+                                    <td><input type="url" name="url" value = "<%= element.url %>"></td>
+                                    <% if (element.team) {%>
+                                        <td>
+                                            <select name="team" id="team">
+                                                <% teams.forEach((team)=>{ %>
+                                                <option value="<%= team.id  %>" <% if(team.name === element.team.name) {%>selected<%} %>><%= team.name %></option>
+                                                <% }) %>
+                                            </select>
+                                        </td>
+                                    <%}  %>
+                                    <td><input type="submit"></a></td>
+                                </form>
+                            </tr>
+                        <%}  else{%>
+                            <tr>
+                                <td><%= element.num %></td>
+                                <td><%= element.code %></td> 
+                                <td><%= element.forename %></td> 
+                                <td><%= element.surname %></td> 
+                                <td><%= element.dob.toDateString() %></td>  
+                                <td><%= element.nationality %></td> 
+                                <td><%= element.url %></td>
+                                <% if (element.team) {%>
+                                    <td><%= element.team.name %></td>
+                                <%}  %>
+                                <td><a href="/edit/<%= element.num  %>">Edit</a></td>
+                            </tr>
+                        <%}  %>
+                    <% }) %>
+                </tbody>
+            </table>
